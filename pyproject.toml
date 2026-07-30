@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jwtdecode-cli"
+version = "1.0.0"
+description = "Decode (never verify) a JWT's header and payload for debugging, with no dependencies."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "All Rights Reserved" }
+authors = [{ name = "sidcore-dev" }]
+keywords = ["jwt", "decode", "cli", "devtools", "debugging"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+jwtdecode-cli = "jwtdecode_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
